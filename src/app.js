@@ -1,6 +1,6 @@
 // Import dependencies
-import express from 'express';
-import dotenv from 'dotenv';
+import express from "express";
+import dotenv from "dotenv";
 
 // Initialize environment variables
 dotenv.config();
@@ -12,14 +12,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Basic route
-app.get('/', (req, res) => {
-  res.send('🚀 Welcome to your Express.js server!');
+// Basic route 
+app.get("/", (req, res) => {
+  res.send("🚀 Welcome to your Express.js server!");
 });
 
 // Example API route
-app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello from Express API 👋' });
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello from Express API 👋" });
 });
 
 export default app;
